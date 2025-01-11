@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,8 +133,15 @@
         }
 
         @keyframes float-image {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         @keyframes float {
@@ -141,6 +149,7 @@
                 transform: translateY(0) rotate(0deg);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100vh) rotate(360deg);
                 opacity: 0;
@@ -148,13 +157,25 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 5px #ff4b6e, 0 0 10px #ff4b6e; }
-            to { text-shadow: 0 0 10px #ff4b6e, 0 0 20px #ff4b6e; }
+            from {
+                text-shadow: 0 0 5px #ff4b6e, 0 0 10px #ff4b6e;
+            }
+
+            to {
+                text-shadow: 0 0 10px #ff4b6e, 0 0 20px #ff4b6e;
+            }
         }
 
         @media (max-width: 1200px) {
@@ -174,33 +195,34 @@
         }
     </style>
 </head>
+
 <body>
     <div class="main-container">
         <div class="image-container left-image">
-            <img src="/api/placeholder/300/400" alt="Left Image" />
+            <img src="https://raw.githubusercontent.com/charbelnaofy/her/main/144ec73e-6595-440f-9ce2-ab6934f7aae4.jpg"
+                alt="Left Image" />
         </div>
-        
+
         <div class="center-content">
             <h1>Counting down to your bitch ass birthday... ❤️ I love you</h1>
             <div id="countdown"></div>
             <div id="message">
                 <!-- Replace this with your message -->
                 Dear [Her Name],
-
                 [Your romantic message goes here...]
-
                 Love,
                 [Your name]
             </div>
         </div>
 
         <div class="image-container right-image">
-            <img src="/api/placeholder/300/400" alt="Right Image" />
+            <img src="https://raw.githubusercontent.com/charbelnaofy/her/main/1e4e9e7b-e89e-4a05-815a-40ef8eebadf0.jpg"
+                alt="Right Image" />
         </div>
     </div>
 
+
     <script>
-        // Set the target date (January 14, 2025 at 00:00 GMT+3)
         const targetDate = new Date('2025-01-14T00:00:00+03:00').getTime();
 
         // Create floating hearts
@@ -216,7 +238,6 @@
 
         setInterval(createHeart, 300);
 
-        // Update countdown
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = targetDate - now;
@@ -258,4 +279,5 @@
         updateCountdown();
     </script>
 </body>
+
 </html>
