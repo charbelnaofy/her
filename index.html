@@ -89,18 +89,20 @@
 
     <script>
         // Set the target date (January 14, 2025 at 00:00 GMT+3)
-        const targetDate = new Date('2025-01-14T00:00:00+03:00').getTime();
+            // Set the target date to 30 seconds from now
+            const targetDate = new Date().getTime() + 30 * 1000;
 
-        // Create floating hearts
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
+            // Create floating hearts
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }
+        
 
         setInterval(createHeart, 300);
 
