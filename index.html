@@ -58,17 +58,34 @@
         }
 
         .center-content {
-            flex: 1;
-            margin: 0 2rem;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(8px);
-            max-width: 600px;
-            position: relative;
-            z-index: 1;
-        }
+    flex: 1;
+    margin: 0 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Add this to prevent content overflow */
+}
+
+#message {
+    display: none;
+    animation: fadeIn 2s;
+    line-height: 1.8;
+    white-space: pre-line;
+    font-size: 1.2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 700px; /* Limit the height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+       
 
         h1 {
             color: #ff4b6e;
@@ -112,17 +129,7 @@
             margin-top: 0.5rem;
         }
 
-        #message {
-            display: none;
-            animation: fadeIn 2s;
-            line-height: 1.8;
-            white-space: pre-line;
-            font-size: 1.2rem;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+       
 
         .heart {
             position: absolute;
@@ -207,11 +214,23 @@
             <h1>Counting down to your bitch ass birthday... ❤️ I love you</h1>
             <div id="countdown"></div>
             <div id="message">
-                <!-- Replace this with your message -->
-                Dear [Her Name],
-                [Your romantic message goes here...]
+                Dear Naof,
+                When you're reading this its going to be your 25th birthday...which is basically 30. lol..Ok sorry. 
+                I love you bby. And for once im going to be serious and open up. I told you before that at the start of the relationship
+                I didn't take it seriously. It was because i was afraid that I actually found someone i can love and give all of myself to. 
+                I was afraid because i didn't know how i would deal with that vulnerability and having to let go of my paranoia and anxiety. 
+                But you taught me to let go of my insecurities and accept that love. Accept that i have someone that loves me and someone that i love. 
+                Everyday you remind me to get over that fear and give you my all. Everyday i know that i have someone that accepts and understands me no matter what I do or go through,
+                and the same goes for you. Everyday you make me fall in love with you again. Everyday despite of life's routine and its numbing effect there is always a light at the end of the tunnel, and that is you naof. Your love is the only thing that makes life special. 
+                I want to be the person you can come to and share all your worries with. I never want you to ever feel alone again, to ever feel like you have to deal with something by yourself, i want to be the person that you can always depend on, because thats what you are to me.
+                And everyday we have to make sacrifices towards maintaining our love and friendship. That is what falling in love everyday entails. I will sacrifice everything i have to everyday to keep you. I love you and i never want you to feel like you have to suffer alone. 
+                That is what love is, facing life together, unconditionally. I couldn't believe that someone i met online would have a personality i can really connect with. The time i spend with you always feels makes me feel like i can just forget about my worries and insecurities and just enjoy your presence. 
+                I love everything about you bby, i can't think of a life without you, and without seeing your beautiful face and hearing ur voice. You are the only person i can be honest with and i hope its the same for you. Sorry i rambled but i was just saying what comes to my mind when i think about you. I love you naof. 
+                I will be here for you whenever you need me. You are my other lost half. and Thank God for that dumbass server that got us to meet each other. I love you baby and may you have the best birthday, i wish i was there to celebrate it with you ❤️   
+
                 Love,
-                [Your name]
+                Charbel
+                
             </div>
         </div>
 
@@ -223,9 +242,8 @@
 
 
     <script>
-        const targetDate = new Date('2025-01-14T00:00:00+03:00').getTime();
+           const targetDate = new Date('2025-01-14T00:00:00+03:00').getTime();
 
-        // Create floating hearts
         function createHeart() {
             const heart = document.createElement('div');
             heart.className = 'heart';
